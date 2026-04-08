@@ -1,0 +1,41 @@
+/* ═══════════════════════════════════════
+   GLOBAL — CSS Variables & Base Styles
+   Load file ini PERTAMA sebelum semua CSS lainnya
+═══════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Baloo+2:wght@700;800&family=Fira+Code:wght@400;500&display=swap');
+
+/* ── Variables ── */
+:root {
+    --purple:       #5b4fcf;
+    --purple-dark:  #4a3fb8;
+    --purple-light: #ede9fb;
+    --purple-xl:    #f5f3ff;
+    --sidebar-w:    240px;
+    --topbar-h:     56px;
+    --bg:           #f0f2f8;
+    --white:        #ffffff;
+    --text:         #1e1e2e;
+    --muted:        #8a8aab;
+    --border:       #e4e4f0;
+}
+
+/* ── Base Reset ── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* ── Layout ── */
+.dash-layout {
+    display: flex;
+    min-height: 100vh;
+}

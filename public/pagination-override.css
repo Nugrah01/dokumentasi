@@ -1,0 +1,118 @@
+/* =============================================
+   PAGINATION OVERRIDE — Laravel Tailwind
+   Tambahkan di halaman.css atau style.css
+   ============================================= */
+
+/* ── Wrapper nav ── */
+.pagination-wrapper nav,
+nav[role="navigation"] {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* Hilangkan flex default Laravel yang bikin layout aneh */
+.pagination-wrapper nav > div,
+nav[role="navigation"] > div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Info text "Showing 1 to 10..." */
+.pagination-wrapper nav p,
+nav[role="navigation"] p {
+    font-size: 12px !important;
+    color: #5a8a90 !important;
+    margin: 0 !important;
+}
+
+/* ── Reset semua span & a di dalam pagination ── */
+.pagination-wrapper nav span,
+.pagination-wrapper nav a,
+nav[role="navigation"] span,
+nav[role="navigation"] a {
+    all: unset !important;
+}
+
+/* ── Base style tombol ── */
+.pagination-wrapper nav span[aria-label],
+.pagination-wrapper nav a[href],
+.pagination-wrapper nav span[aria-current],
+nav[role="navigation"] span[aria-label],
+nav[role="navigation"] a[href],
+nav[role="navigation"] span[aria-current] {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 34px !important;
+    height: 34px !important;
+    padding: 0 10px !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    font-family: inherit !important;
+    text-decoration: none !important;
+    border: 1.5px solid #CCFBF1 !important;
+    color: #0D9488 !important;
+    background: #ffffff !important;
+    cursor: pointer !important;
+    transition: all 0.15s !important;
+    line-height: 1 !important;
+}
+
+/* ── Hover ── */
+.pagination-wrapper nav a[href]:hover,
+nav[role="navigation"] a[href]:hover {
+    background: #F0FDFA !important;
+    border-color: #0ABFBC !important;
+    color: #0ABFBC !important;
+}
+
+/* ── Active page ── */
+.pagination-wrapper nav span[aria-current="page"],
+nav[role="navigation"] span[aria-current="page"] {
+    background: #0ABFBC !important;
+    border-color: #0ABFBC !important;
+    color: #ffffff !important;
+    cursor: default !important;
+}
+
+/* ── Disabled (prev/next nonaktif) ── */
+.pagination-wrapper nav span:not([aria-current]):not([aria-label]) > span,
+nav[role="navigation"] span:not([aria-current]):not([aria-label]) > span {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 34px !important;
+    height: 34px !important;
+    padding: 0 10px !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    border: 1.5px solid #CCFBF1 !important;
+    color: #99c4c8 !important;
+    background: #F0FDFA !important;
+    cursor: not-allowed !important;
+}
+
+/* ── SVG arrow — paksa kecil & teal ── */
+.pagination-wrapper nav svg,
+nav[role="navigation"] svg {
+    width: 14px !important;
+    height: 14px !important;
+    stroke: currentColor !important;
+    fill: none !important;
+    display: block !important;
+}
+
+/* ── Dots "..." ── */
+.pagination-wrapper nav span[aria-disabled="true"],
+nav[role="navigation"] span[aria-disabled="true"] {
+    border: none !important;
+    background: transparent !important;
+    color: #5a8a90 !important;
+    cursor: default !important;
+}

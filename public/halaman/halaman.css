@@ -1,0 +1,271 @@
+/* =============================================
+   halaman/halaman.css
+   ============================================= */
+
+/* ── Content Wrapper ── */
+.content-wrapper {
+    padding: 2rem;
+    max-width: 1200px;
+}
+
+/* ── Page Header ── */
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.page-header h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #0f1923;
+    margin: 0;
+}
+
+/* ── Alert ── */
+.alert {
+    padding: 0.85rem 1.2rem;
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+    font-size: 0.9rem;
+}
+
+.alert-success {
+    background-color: #CCFBF1;
+    color: #0D5E5A;
+    border: 1px solid #99F6E4;
+}
+
+/* ── Card & Table ── */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.table thead {
+    background-color: #F0FDFA;
+    border-bottom: 2px solid #CCFBF1;
+}
+
+.table thead th {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: #0D9488;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #F0FDFA;
+    transition: background 0.15s;
+}
+
+.table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.table tbody tr:hover {
+    background-color: #F0FDFA;
+}
+
+.table td {
+    padding: 0.85rem 1rem;
+    color: #0f1923;
+    vertical-align: middle;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ── Badge ── */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.65rem;
+    background-color: #CCFBF1;
+    color: #0D9488;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+/* ── Action Buttons ── */
+.action-buttons {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+/* ── Pagination ── */
+.pagination-wrapper {
+    padding: 1rem 1.2rem;
+    border-top: 1px solid #CCFBF1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Laravel Pagination Override */
+.pagination-wrapper nav { width: 100%; }
+
+.pagination-wrapper nav > div:first-child {
+    font-size: 12px;
+    color: #5a8a90;
+}
+
+.pagination-wrapper nav svg {
+    width: 14px !important;
+    height: 14px !important;
+}
+
+.pagination-wrapper .pagination {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination-wrapper span[aria-current="page"] > span,
+.pagination-wrapper a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid #CCFBF1;
+    color: #0D9488;
+    background: #ffffff;
+    transition: all 0.15s;
+}
+
+.pagination-wrapper a:hover {
+    background: #F0FDFA;
+    border-color: #0ABFBC;
+    color: #0ABFBC;
+}
+
+/* Active page */
+.pagination-wrapper span[aria-current="page"] > span {
+    background: #0ABFBC;
+    border-color: #0ABFBC;
+    color: #ffffff;
+    cursor: default;
+}
+
+/* Disabled prev/next */
+.pagination-wrapper span:not([aria-current]) > span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #CCFBF1;
+    color: #99c4c8;
+    background: #F0FDFA;
+    cursor: not-allowed;
+}
+
+/* ── Base Button ── */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: inherit;
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1;
+    white-space: nowrap;
+    transition: background 0.15s, border-color 0.15s, box-shadow 0.15s;
+}
+
+/* Primary — Tambah Halaman */
+.btn-primary {
+    background: #0ABFBC;
+    color: #0f1923;
+    border-color: #0ABFBC;
+    box-shadow: 0 2px 8px rgba(10, 191, 188, 0.3);
+}
+
+.btn-primary:hover {
+    background: #0D9488;
+    border-color: #0D9488;
+    box-shadow: 0 4px 12px rgba(10, 191, 188, 0.4);
+    color: #ffffff;
+}
+
+/* Button Sizes */
+.btn-sm {
+    padding: 7px 16px;
+    font-size: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* Warning — Edit */
+.btn-warning {
+    background: #f59e0b;
+    color: #ffffff;
+    border-color: #f59e0b;
+    box-shadow: 0 2px 6px rgba(245, 158, 11, 0.3);
+}
+
+.btn-warning:hover {
+    background: #d97706;
+    border-color: #d97706;
+    box-shadow: 0 4px 10px rgba(245, 158, 11, 0.4);
+    color: #ffffff;
+}
+
+/* Danger — Hapus */
+.btn-danger {
+    background: #ef4444;
+    color: #ffffff;
+    border-color: #ef4444;
+    box-shadow: 0 2px 6px rgba(239, 68, 68, 0.3);
+}
+
+.btn-danger:hover {
+    background: #dc2626;
+    border-color: #dc2626;
+    box-shadow: 0 4px 10px rgba(239, 68, 68, 0.4);
+    color: #ffffff;
+}
+
+/* Secondary disabled — Tidak Bisa Hapus */
+.btn-secondary:disabled,
+.btn-secondary[disabled] {
+    background: #F0FDFA;
+    color: #99c4c8;
+    border-color: #CCFBF1;
+    box-shadow: none;
+    cursor: not-allowed;
+}

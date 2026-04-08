@@ -1,0 +1,73 @@
+
+/* ═══════════════════════════════════════
+   TOPBAR — Teal Theme
+═══════════════════════════════════════ */
+
+.topbar {
+    position: fixed;
+    top: 0; left: var(--sidebar-w); right: 0;
+    height: var(--topbar-h);
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    gap: 12px;
+    z-index: 99;
+}
+
+.topbar-title {
+    flex: 1;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.topbar-user {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #00bcd4;
+    color: #0f1729;
+    padding: 7px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background .2s;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.topbar-user:hover { background: #00a5bb; }
+
+/* Hamburger — hidden on desktop, shown on mobile */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--muted);
+    padding: 6px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    transition: background .15s;
+}
+.hamburger:hover { background: rgba(0, 188, 212, .08); color: #00bcd4; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .topbar    { left: 0; padding: 0 16px; }
+    .hamburger { display: flex; align-items: center; }
+}
+
+@media (max-width: 480px) {
+    .topbar-title            { font-size: 10px; letter-spacing: 1.5px; }
+    .topbar-user .user-label { display: none; }
+    .topbar-user             { padding: 8px; border-radius: 50%; }
+}

@@ -1,0 +1,217 @@
+/* ============================================================
+   kategori/style.css
+   Main content area — Tambah Kategori
+   ============================================================ */
+
+/* ---------- Layout ---------- */
+.main-content {
+    margin-left: 210px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #eaf6f8;
+}
+
+.content-wrapper {
+    padding: 32px 40px;
+    flex: 1;
+}
+
+/* ---------- Page Banner ---------- */
+.page-banner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.page-banner-icon {
+    width: 44px;
+    height: 44px;
+    background: #00bcd4;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.page-banner-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: #0f1729;
+}
+
+.page-banner-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1.2;
+}
+
+.page-banner-sub {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 3px;
+}
+
+/* ---------- Form Card ---------- */
+.form-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #d0eef2;
+    box-shadow: 0 2px 12px rgba(0, 188, 212, 0.06);
+    padding: 32px 36px;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-card form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* ---------- Form Group ---------- */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+/* ---------- Form Control ---------- */
+.form-control {
+    width: 100%;
+    background: #f8f8fc;
+    border: 1.5px solid #e2e5f0;
+    border-radius: 8px;
+    padding: 11px 16px;
+    font-size: 13px;
+    font-family: inherit;
+    color: #1e293b;
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+    line-height: 1.5;
+}
+
+.form-control::placeholder {
+    color: #94a3b8;
+}
+
+.form-control:focus {
+    border-color: #00bcd4;
+    box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.12);
+    background: #ffffff;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Select */
+.form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394a3b8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 14px;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+/* Validation */
+.form-control.is-invalid {
+    border-color: #ef4444;
+    background: #fff8f8;
+}
+
+.form-control.is-invalid:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.invalid-feedback {
+    display: block;
+    font-size: 11px;
+    color: #ef4444;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+/* Spacing helpers */
+.mt-3 { margin-top: 16px; }
+.mt-4 { margin-top: 20px; }
+
+/* ---------- Form Actions ---------- */
+.form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 32px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: inherit;
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1;
+    white-space: nowrap;
+    transition: background 0.15s, border-color 0.15s, box-shadow 0.15s, color 0.15s;
+}
+
+.btn svg {
+    width: 15px;
+    height: 15px;
+    stroke: currentColor;
+    flex-shrink: 0;
+}
+
+/* Secondary — Batal */
+.btn-secondary {
+    background: #ffffff;
+    color: #475569;
+    border-color: #d1d5e0;
+}
+
+.btn-secondary:hover {
+    background: #f8fafc;
+    border-color: #94a3b8;
+}
+
+/* Primary — Simpan */
+.btn-primary {
+    background: #00bcd4;
+    color: #0f1729;
+    border-color: #00bcd4;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 11px 28px;
+    box-shadow: 0 2px 8px rgba(0, 188, 212, 0.3);
+}
+
+.btn-primary:hover {
+    background: #00a5bb;
+    border-color: #00a5bb;
+    box-shadow: 0 4px 12px rgba(0, 188, 212, 0.4);
+}

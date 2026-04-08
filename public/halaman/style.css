@@ -1,0 +1,608 @@
+/* ============================================================
+   halaman/style.css
+   Main content only — Tambah Halaman
+   (sidebar & topbar sudah ada di file CSS lain)
+   ============================================================ */
+
+/* ── Main Content ── */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #eaf6f8;
+}
+
+.page-body {
+    padding: 28px 32px;
+    flex: 1;
+}
+
+/* ── Responsif ── */
+@media (max-width: 768px) {
+    .page-body {
+        padding: 20px 16px;
+    }
+
+    .page-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .page-banner-left {
+        width: 100%;
+    }
+
+    .action-group {
+        width: 100%;
+    }
+
+    .action-group .btn-batal {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .form-card {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .form-footer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .status-group {
+        justify-content: space-between;
+    }
+
+    .action-group {
+        justify-content: space-between;
+    }
+
+    .action-group .btn-simpan,
+    .action-group .btn-batal {
+        flex: 1;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-body {
+        padding: 16px 12px;
+    }
+
+    .page-banner-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .page-banner-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .page-banner-title {
+        font-size: 13px;
+    }
+
+    .page-banner-sub {
+        font-size: 10px;
+    }
+
+    .form-card {
+        padding: 16px;
+        border-radius: 10px;
+    }
+
+    .field-group {
+        margin-bottom: 16px;
+    }
+
+    .field-label {
+        font-size: 12px;
+    }
+
+    .field-input,
+    .field-textarea,
+    .field-select {
+        font-size: 12px;
+        padding: 10px 14px;
+    }
+
+    .btn-simpan,
+    .btn-batal {
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+
+    .btn-simpan svg,
+    .btn-batal svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .fs-modal {
+        height: calc(100vh - 32px);
+    }
+
+    .fs-modal-header {
+        padding: 12px 16px;
+    }
+
+    .fs-modal-body {
+        padding: 12px;
+    }
+
+    .ck.ck-editor__top .ck-sticky-panel .ck-toolbar {
+        padding: 4px 8px !important;
+    }
+
+    .ck.ck-editor__main .ck-editor__editable {
+        padding: 12px !important;
+        font-size: 12px !important;
+    }
+}
+
+/* ── Banner Header ── */
+.page-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 16px;
+}
+
+.page-banner-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.page-banner-icon {
+    width: 42px;
+    height: 42px;
+    background: #00bcd4;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.page-banner-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: #0f1729;
+}
+
+.page-banner-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1.3;
+}
+
+.page-banner-sub {
+    font-size: 11px;
+    color: #94a3b8;
+    margin-top: 3px;
+}
+
+/* ── Fullscreen Button ── */
+.btn-fullscreen {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 16px;
+    background: #ffffff;
+    border: 1px solid #d0eef2;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: inherit;
+    color: #475569;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: border-color 0.15s, color 0.15s;
+}
+
+.btn-fullscreen svg {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+}
+
+.btn-fullscreen:hover {
+    border-color: #00bcd4;
+    color: #00bcd4;
+}
+
+/* ── Form Card ── */
+.form-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #d0eef2;
+    box-shadow: 0 2px 16px rgba(0, 188, 212, 0.06);
+    padding: 28px 32px 24px;
+}
+
+/* ── Field Group ── */
+.field-group {
+    margin-bottom: 20px;
+}
+
+.field-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+/* ── Input ── */
+.field-input {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #d0eef2;
+    border-radius: 8px;
+    padding: 11px 16px;
+    font-size: 13px;
+    font-family: inherit;
+    color: #1e293b;
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    box-sizing: border-box;
+}
+
+.field-input::placeholder { color: #94a3b8; }
+
+.field-input:focus {
+    border-color: #00bcd4;
+    box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.12);
+}
+
+/* ── Select ── */
+.field-select {
+    width: 100%;
+    appearance: none;
+    background-color: #f5f5fb;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394a3b8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 14px;
+    border: 1px solid #d0eef2;
+    border-radius: 8px;
+    padding: 11px 40px 11px 16px;
+    font-size: 13px;
+    font-family: inherit;
+    color: #64748b;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    box-sizing: border-box;
+}
+
+.field-select:focus {
+    border-color: #00bcd4;
+    box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.12);
+    background-color: #ffffff;
+}
+
+.field-select-sm {
+    width: 180px;
+}
+
+/* ── Textarea ── */
+.field-textarea {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #d0eef2;
+    border-radius: 8px;
+    padding: 11px 16px;
+    font-size: 13px;
+    font-family: inherit;
+    color: #1e293b;
+    outline: none;
+    resize: vertical;
+    line-height: 1.6;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    box-sizing: border-box;
+}
+
+.field-textarea::placeholder { color: #94a3b8; }
+
+.field-textarea:focus {
+    border-color: #00bcd4;
+    box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.12);
+}
+
+/* ── CKEditor 5 — Override ── */
+
+.ck.ck-editor {
+    border-radius: 8px !important;
+    overflow: hidden;
+    box-shadow: none !important;
+}
+
+.ck.ck-editor__top .ck-sticky-panel .ck-toolbar {
+    background: #f0fbfc !important;
+    border: 1px solid #d0eef2 !important;
+    border-bottom: 1px solid #d0eef2 !important;
+    border-radius: 8px 8px 0 0 !important;
+    padding: 6px 10px !important;
+}
+
+.ck.ck-toolbar .ck-button {
+    border-radius: 5px !important;
+    color: #64748b !important;
+    transition: background 0.15s, color 0.15s !important;
+}
+
+.ck.ck-toolbar .ck-button:hover,
+.ck.ck-toolbar .ck-button.ck-on {
+    background: rgba(0, 188, 212, .12) !important;
+    color: #00a5bb !important;
+}
+
+.ck.ck-toolbar__separator {
+    background: #d0eef2 !important;
+}
+
+.ck.ck-editor__main .ck-editor__editable {
+    background: #ffffff !important;
+    border: 1px solid #d0eef2 !important;
+    border-top: none !important;
+    border-radius: 0 0 8px 8px !important;
+    min-height: 220px !important;
+    padding: 14px 18px !important;
+    font-size: 13px !important;
+    font-family: inherit !important;
+    color: #1e293b !important;
+    line-height: 1.7 !important;
+    box-shadow: none !important;
+    transition: border-color 0.15s, box-shadow 0.15s !important;
+}
+
+.ck.ck-editor__main .ck-editor__editable.ck-focused {
+    border-color: #00bcd4 !important;
+    box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.12) !important;
+    outline: none !important;
+}
+
+.ck .ck-placeholder::before {
+    color: #94a3b8 !important;
+    font-style: normal !important;
+}
+
+.ck.ck-dropdown__panel {
+    border: 1px solid #d0eef2 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 16px rgba(0, 188, 212, 0.08) !important;
+    overflow: hidden;
+}
+
+.ck.ck-list__item .ck-button:hover {
+    background: rgba(0, 188, 212, .12) !important;
+    color: #00a5bb !important;
+}
+
+/* ── Form Footer ── */
+.form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    margin-top: 8px;
+    border-top: 1px solid #d0eef2;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.status-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.status-group .field-label {
+    margin-bottom: 0;
+    white-space: nowrap;
+}
+
+.action-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ── Button: Batal ── */
+.btn-batal {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 20px;
+    background: #ffffff;
+    border: 1.5px solid #d0eef2;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: inherit;
+    color: #475569;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.btn-batal svg {
+    width: 15px;
+    height: 15px;
+    stroke: currentColor;
+}
+
+.btn-batal:hover {
+    background: #f0fbfc;
+    border-color: #00bcd4;
+}
+
+/* ── Button: Simpan ── */
+.btn-simpan {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 28px;
+    background: #00bcd4;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: inherit;
+    color: #0f1729;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    box-shadow: 0 2px 10px rgba(0, 188, 212, 0.35);
+    transition: background 0.15s, box-shadow 0.15s;
+}
+
+.btn-simpan svg {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+}
+
+.btn-simpan:hover {
+    background: #00a5bb;
+    box-shadow: 0 4px 16px rgba(0, 188, 212, 0.45);
+}
+
+/* ── Fullscreen Overlay ── */
+.fs-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.fs-overlay.fs-active {
+    display: flex;
+    animation: fs-fade-in 0.2s ease;
+}
+
+@keyframes fs-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* ── Fullscreen Modal ── */
+.fs-modal {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 1100px;
+    height: calc(100vh - 48px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: fs-slide-up 0.22s ease;
+}
+
+@keyframes fs-slide-up {
+    from { transform: translateY(16px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* ── Modal Header ── */
+.fs-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 1px solid #d0eef2;
+    background: #f0fbfc;
+    flex-shrink: 0;
+    border-radius: 16px 16px 0 0;
+}
+
+.fs-modal-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.fs-modal-title svg {
+    stroke: #00bcd4;
+}
+
+.fs-close {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    background: #ffffff;
+    border: 1.5px solid #d0eef2;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: inherit;
+    color: #475569;
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.fs-close svg {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+}
+
+.fs-close:hover {
+    border-color: #ef4444;
+    color: #ef4444;
+    background: #fff5f5;
+}
+
+/* ── Modal Body ── */
+.fs-modal-body {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.fs-modal-body .ck.ck-editor {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    min-height: 0;
+}
+
+.fs-modal-body .ck.ck-editor__main {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.fs-modal-body .ck.ck-editor__main .ck-editor__editable {
+    flex: 1 !important;
+    min-height: 0 !important;
+    height: 100% !important;
+    max-height: none !important;
+    overflow-y: auto !important;
+    border-radius: 0 0 8px 8px !important;
+}
