@@ -26,7 +26,7 @@ Route::get('/register', [AuthController::class, 'showRegister'])->name('register
 Route::post('/register', [AuthController::class, 'register']);
 
 // halaman dashboard user
-Route::get('/dashboard', function () {return view('dashboard');});
+Route::get('/', function () {return view('dashboard');});
 Route::get('/kategori', [KategoriController::class, 'kategori']);
 Route::get('/halaman/{id}', [HalamanController::class, 'show'])->name('halaman.show');
 
